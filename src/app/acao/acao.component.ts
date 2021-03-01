@@ -1,6 +1,7 @@
+import { Acao } from './../model/acao';
 import { AcaoService } from './../service/acao.service';
 import { Component, OnInit } from '@angular/core';
-import { Acao } from '../model/acao';
+
 
 @Component({
   selector: 'app-acao',
@@ -9,7 +10,9 @@ import { Acao } from '../model/acao';
 })
 export class AcaoComponent implements OnInit {
 
+  acao: Acao;
   acoes: Acao[] = [];
+
 
   constructor(private service: AcaoService) {
 
@@ -24,6 +27,14 @@ export class AcaoComponent implements OnInit {
       this.acoes = res;
       console.log(res);
     })
+  }
+
+  public gravar(){
+    this.service.create(this.acao).subscribe(res => {
+      console.log("Acao gravada com sucesso!",res);
+
+    })
+    this.listar();
   }
 
 }
