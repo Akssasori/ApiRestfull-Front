@@ -1,0 +1,54 @@
+<p>acao works!</p>
+
+<section>
+    <div class="cabecalho"></div>
+</section>
+
+<h1>API Apoio merchandising</h1>
+
+<div class="listagem">
+    <h2>Lista de Acoes</h2>
+
+    <div class="col-md-8 offset-md-2">
+        <table class="table table-bordered table-hover shadow">
+            <thead class="bg-dark text-white">
+                <tr class="text-center">
+                    <th>id</th>
+                    <th>programa</th>
+                    <th>data</th>
+                    <th>cliente</th>
+                    <th>idCliente</th>
+                    <th>produto</th>
+                    <th>tipoAcao</th>
+                    <th>descricao</th>
+                    <th>entrada</th>
+                    <th>saida</th>
+                    <th>agencia</th>
+                    <th>url</th>
+                    <th>idAgencia</th>
+                    <th>duracao</th>
+                    <th>tvAberta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let a of acoes'>
+                    <td>{{a.id}}</td>
+                    <td>{{a.programa}}</td>
+                    <td>{{a.data}}</td>
+                    <td>{{a.cliente}}</td>
+                    <td>{{a.idCliente}}</td>
+                    <td>{{a.produto}}</td>
+                    <td>{{a.tipoAcao}}</td>
+                    <td>{{a.descricao}}</td>
+                    <td>{{a.entrada}}</td>
+                    <td>{{a.saida}}</td>
+                    <td>{{a.agencia}}</td>
+                    <td>{{a.url}}</td>
+                    <td>{{a.idAgencia}}</td>
+                    <td>{{a.duracao}}</td>
+                    <td>{{a.tvAberta}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
