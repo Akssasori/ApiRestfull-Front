@@ -1,0 +1,76 @@
+<p>agencia works!</p>
+<div class="container">
+    <div class="row">
+        <!-- primeira coluna lado esquerdo-->
+        <div class="col-md-4">
+            <div class="card shadow border-primary">
+                <div class="card-header text-center bg-primary text-white">
+                    <h4>Cadastro de Agência <i class="fas fa-pen"></i></h4>
+                </div>
+                <div class="card-body">
+                    <label>Agência:</label>
+                    <input type='text' name='nome' [(ngModel)]='aluno.nome' class="form-control mb-2"
+                        placeholder="Digite a agência" title="Digite apenas letras">
+
+                    <label>Id da agência:</label>
+                    <input type='number' name='disciplina' [(ngModel)]='aluno.disciplina' class="form-control mb-2"
+                        placeholder="Digite o id da agência" title="Digite um id">
+
+                    <button (click)='gravarAgencia()' title='clique para gravar'
+                        class="btn btn-primary btn-block">Adicionar
+                        <i class="far fa-save-plus"></i>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--Segunda coluna da direita-->
+        <div class="col-md-8">
+            <div class="card shadow border-success">
+                <div class="card header text-center text-white bg-success">
+                    <h4>Lista de agências </h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead class="bg-dark text-white">
+                            <tr class='text-center'>
+                                <th>ID</th>
+                                <th>ID AGENCIA</th>
+                                <th>AGENCIA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let a of agencias'>
+                                
+                                <td>{{a.id}}</td>
+                                <td>{{a.idAgencia}}</td>
+                                <td>{{a.agencia}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--ng s -o -->

@@ -22,18 +22,24 @@ export class AcaoService {
     return this.http.post<Acao>(`${urlAcao}`,acao);
   }
 
-  public update(acao: Acao):Observable<Acao>{
-    const url = `${urlAcao}/${acao.id}`;
-    return this.http.put<Acao>(url,acao)
-  }
+  // public update(acao: Acao):Observable<Acao>{
+  //   const url = `${urlAcao}/${acao.id}`;
+  //   return this.http.put<Acao>(url,acao)
+  // }
   // public update(acao:Acao){
   //   return this.http.put<Acao>(`${urlAcao}/${acao.id}`);
   // }
 
-  public delete(id:number):Observable<Acao>{
-    const url = `${urlAcao}/${id}`;
-    return this.http.delete<Acao>(url);
+  // public delete(id:number):Observable<Acao>{
+  //   const url = `${urlAcao}/${id}`;
+  //   return this.http.delete<Acao>(url);
 
-  }
+  // }
+
+  // public deleteAcao(id){
+  //   return this.http.delete(`${urlAcao}/${id}`)
+  // }
+
+   
 
 }

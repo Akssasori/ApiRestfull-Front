@@ -1,3 +1,4 @@
+import { AgenciaService } from './service/agencia.service';
 import { AcaoService } from './service/acao.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AcaoComponent } from './acao/acao.component';
+import { AgenciaComponent } from './agencia/agencia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AcaoComponent
+    AcaoComponent,
+    AgenciaComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import { AcaoComponent } from './acao/acao.component';
     FormsModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [AcaoService],
+  providers: [AcaoService, AgenciaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
